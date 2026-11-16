@@ -93,11 +93,11 @@
     html[dir=ltr] body{font-family:"Segoe UI",Roboto,Arial,sans-serif}
     @media(max-width:900px){.nav .links{gap:10px}}
     @media(max-width:390px){.lang{padding:6px 10px;font-size:13px}}
-    .shot{height:200px;display:grid;place-items:center;margin:2px -6px 10px;background:radial-gradient(ellipse at 50% 55%,#1f56b366 0,transparent 68%)}
-    .product.best .shot{background:radial-gradient(ellipse at 50% 55%,#ff8a3d44 0,transparent 68%)}
-    .shot img{height:100%;width:auto;max-width:100%;object-fit:contain;filter:drop-shadow(0 16px 16px #000c);transition:transform .35s}
-    .product:hover .shot img{transform:scale(1.08) translateY(-4px)}
-    @media(max-width:760px){.shot{height:230px}}
+    .shot{position:relative;height:190px;margin:0 0 12px;display:flex;align-items:center;justify-content:center;overflow:hidden;isolation:isolate}
+    .shot:after{content:"";position:absolute;z-index:-1;bottom:10px;left:18%;right:18%;height:16px;border-radius:50%;background:#000a;filter:blur(10px)}
+    .shot img{display:block;height:180px;width:180px;max-width:100%;object-fit:contain;filter:drop-shadow(0 6px 8px #0008);transition:transform .35s}
+    .product:hover .shot img{transform:scale(1.06)}
+    @media(max-width:760px){.shot{height:220px}.shot img{height:210px;width:210px}}
   </style>
 </head>
 <body>
